@@ -1,0 +1,17 @@
+
+            #canvas {
+                height: 480px;
+                margin: 0 auto;
+                text-align: left;
+                width: 640px;
+            }
+            #code {
+                font-family: Consolas, Monaco, "Lucida Console", monospace;
+                height: 4em;
+                margin: 10px;
+                padding: 0;
+                width: 90%;
+            }
+            #run {
+                font-size: 2em;
+            }

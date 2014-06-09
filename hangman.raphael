@@ -1,0 +1,17 @@
+paper.path( "M620,460 L500,460" );
+paper.path( "M560,460 L560,280" );
+paper.path( "M560,280 L500,280" );
+paper.path( "M500,280 L500,310" );
+paper.circle(500, 325, 15);
+paper.path( "M500,340 L500,390" );
+paper.path( "M500,340 L470,370" );
+paper.path( "M500,340 L530,370" );
+paper.path( "M500,390 L470,420" );
+paper.path( "M500,390 L530,420" );
+paper.circle(505, 320, 2);
+paper.circle(495, 320, 2);
+paper.path( "M501,316 L509,324" );
+paper.path( "M509,316 L501,324" );
+
+paper.path( "M499,316 L491,324" );
+paper.path( "M491,316 L499,324" );

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://raphaeljs.com/playground.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>raphael toybox</title><a href="index.html">go back..</a>
+        <link rel="stylesheet" href="raphael.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="raphael-print.css" type="text/css" media="print">
+        <script src="raphael.js"></script>
+        <style media="screen">
+            body {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            h1 {
+                font-weight: 400;
+                height: 5%;
+            }
+            #canvas {
+                height: 480px;
+                margin: 0 auto;
+                text-align: left;
+                width: 640px;
+            }
+            #code {
+                font-family: Consolas, Monaco, "Lucida Console", monospace;
+                height: 4em;
+                margin: 10px;
+                padding: 0;
+                width: 90%;
+            }
+            #run {
+                font-size: 2em;
+            }
+        </style>
+        <script>
+            window.onload = function () 
+                {
+                    var bouncex = 1;
+                    var bouncey = 1;
+                    var run = 1;
+                    var x = 320;
+                    var y = 240;
+                    var paper = Raphael("canvas", 640, 480),
+                        btn = document.getElementById("run"),
+                        cd = document.getElementById("code");
+                        paper.path( "M10,470 L20,470" );
+                        paper.path( "M10,10 L20,10" );
+
+                        while (run>0) 
+                            {
+                                x += bouncex;
+                                y += bouncey;
+                                
+                                if (x>640) {bouncex = -1 * bouncex}
+                                if (x<0) {bouncex = -1 * bouncex}
+                                if (y>480) {bouncey = -1 * bouncey}
+                                if (y<0) {bouncey = -1 * bouncey}
+                                paper.circle(x, y, 10);
+
+                            }
+                };
+        </script>
+    </head>
+    <body>
+
+        <div id="canvas"></div>
+
+        
+    
+
+</body></html>

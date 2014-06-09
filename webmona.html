@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<title>webmona</title>
+		<link rel="stylesheet" type="text/css" href="webmona.css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<!-- jQuery rest -->
+		<script src="http://jpillora.com/jquery.rest/dist/1/jquery.rest.min.js"></script>
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js" async defer></script>
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js" async defer></script>
+	</head>
+	<body><div id='gallery'>
+		
+		</div>
+		<div id='evolver'>
+		<canvas id="input-canvas" class='default-hidden'></canvas><br>
+		<canvas id="best-canvas" class='default-hidden'></canvas><br>
+		<canvas id="test-canvas" class='default-hidden'></canvas><br>
+		
+		<div id='minmaxdiv'>
+			<button id='minmax'>▲</button>
+		</div>
+		<div id='toolbox'>
+			<div id="social">
+			  	<a href="http://twitter.com/share" class="twitter-share-button"
+	    			data-url="http://infoburp.github.io/webmona/"
+	    			data-text="Evolve a match to an image from random polygons"
+	    			data-count="horizontal" data-via="29a_ch">Tweet</a>
+				<div class="fb-like" data-href="http://infoburp.github.io/webmona/" data-send="true" data-layout="button_count" data-width="145" data-	show-faces="true" data-font="arial" data-colorscheme="light"></div>
+				&nbsp;
+	 			<div class="g-plusone" data-size="medium"
+	   				data-href="http://infoburp.github.io/webmona/" data-count="true"></div>
+	   			<div id="fb-root"></div>
+	   			<script>(function(d, s, id) 
+	   				{
+		   				var js, fjs = d.getElementsByTagName(s)[0];
+		   				if (d.getElementById(id)) return;
+		   				js = d.createElement(s); js.id = id;
+		   				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		   				fjs.parentNode.insertBefore(js, fjs);
+	   				}(document, 'script', 'facebook-jssdk'));
+	   			</script>
+   			</div><br>
+			<label>Upload image</label>
+			<input type='file' id='image-input' /><br>
+			<div id='top-button-container'>
+			<!--<button id='start'>▶ Start</button>
+			<button id='pause'>ll Pause</button><br><br></div><br>--></div>
+			Fitness(time) <output id='fitness'></output>
+			(<output id='time-elapsed'></output>)<br><br>
+			Mutations <output id='evolution-count'></output><br>
+			.Failed <output id='fail-total'></output><br>
+			.Succesful <output id='win-total'></output><br><br>
+			Win / fail ratio <output id='win-fail-ratio'></output><br><br>
+			Mutations/s <output id='evolutions-per-second'></output><br>
+			Average mutations/s <output id='average-evolutions-per-second'></output><br>
+			.Average fails per second <output id='fails-per-second'></output><br>
+			.Average wins per second <output id='wins-per-second'></output><br><br>
+			Consecutive failed mutations <output id='consecutive-failures'></output><br>
+			Consecutive successful mutations <output id='consecutive-wins'></output><br><br>
+			Most fails in a row <output id='fail-streak'></output><br>
+			Most wins in a row <output id='win-streak'></output><br><br>
+			<label for='num-polys'>Polygons</label>
+			<input id='num-polys' type='number' step='1' min='1' max='1000' value='64' /><br>
+			<label for='num-verts'>Vertices&nbsp;&nbsp;</label>
+			<input id='num-verts' type='number' step='1' min='3' max='30' value='3' /><br><br>
+			<div id='bottom-button-container'>
+			<textarea id='clipboard'></textarea><br>
+			<button id='b_export_dna'>Export DNA</button>
+			<button id='b_export_svg'>Export SVG</button>
+			<button id='b_import_dna'>Import DNA</button></div><br>
+			<input type="checkbox" id="auto_image_change" checked>Get new image when evolution slows down 
+		</div>
+		<script type="text/javascript" src="webmona.js"></script>
+		</div>
+
+	</body>
+</html>

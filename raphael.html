@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://raphaeljs.com/playground.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>raphael toybox</title><a href="index.html">go back..</a>
+        <link rel="stylesheet" href="raphael.css" type="text/css" media="screen">
+        <script src="raphael.js"></script>
+        <script>
+            window.onload = function () {
+                var paper = Raphael("canvas", 640, 480),
+                    btn = document.getElementById("run"),
+                    cd = document.getElementById("code");
+
+                (btn.onclick = function () {
+                    paper.clear();
+                    paper.rect(0, 0, 640, 480, 10).attr({fill: "#fff", stroke: "none"});
+                    try {
+                        (new Function("paper", "window", "document", cd.value)).call(paper, paper);
+                    } catch (e) {
+                        alert(e.message || e);
+                    }
+                })();
+            };
+        </script>
+    </head>
+    <body>
+                <ul><li><div><textarea id="code">paper.circle(320, 240, 60).animate({fill: "#223fa3", stroke: "#000", "stroke-width": 80, "stroke-opacity": 0.5}, 2000);</textarea></div></li>
+        <li><div><button id="run" type="button">Run</button></div></li>
+        <li><div id="canvas"></div></li></ul>
+
+        
+    
+
+</body></html>
